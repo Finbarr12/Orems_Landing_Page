@@ -349,7 +349,13 @@
                 <ul>
                   <li><img src="images/abt_01.png" alt="about image" /></li>
                   <li>
-                    <div class="video-placeholder">
+                    <a
+                      class="popup-youtube play-button"
+                      data-url="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"
+                      data-toggle="modal"
+                      data-target="#myModal"
+                      title="About Video"
+                    >
                       <img src="images/abt_02.png" alt="about video" />
                       <div class="waves-block">
                         <div class="waves wave-1"></div>
@@ -359,7 +365,7 @@
                       <span class="play_icon"
                         ><img src="images/play_black.png" alt="play button"
                       /></span>
-                    </div>
+                    </a>
                   </li>
                   <li><img src="images/abt_03.png" alt="about image" /></li>
                 </ul>
@@ -557,6 +563,32 @@
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Query Section Start -->
+      <section class="row_am query_section">
+        <div class="query_inner" data-aos="fade-in" data-aos-duration="1500">
+          <div class="container">
+            <span class="banner_shape1"
+              ><img src="images/banner-shape1.png" alt="shape"
+            /></span>
+            <span class="banner_shape2"
+              ><img src="images/banner-shape2.png" alt="shape"
+            /></span>
+            <span class="banner_shape3"
+              ><img src="images/banner-shape3.png" alt="shape"
+            /></span>
+
+            <div class="section_title">
+              <h2>Have Any Questions? We're Here to Help!</h2>
+              <p>
+                If you have any queries, feel free to reach out. Our team is
+                ready to assist you with quick and reliable support.
+              </p>
+            </div>
+            <a href="#contact_us" class="btn white_btn">CONTACT US NOW</a>
           </div>
         </div>
       </section>
@@ -1453,6 +1485,44 @@
           <span><img src="images/go_top.png" alt="go to top" /></span>
         </div>
       </footer>
+
+      <!-- VIDEO MODAL -->
+      <div
+        class="modal fade youtube-video"
+        id="myModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="myModalLabel"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button
+              id="close-video"
+              type="button"
+              class="button btn btn-default text-right"
+              data-dismiss="modal"
+              title="Close Video"
+            >
+              <i class="icofont-close-line-circled"></i>
+            </button>
+            <div class="modal-body">
+              <div id="video-container" class="video-container">
+                <iframe
+                  id="youtubevideo"
+                  src="#"
+                  width="640"
+                  height="360"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="purple_backdrop"></div>
     </div>
 
     <!-- Scripts -->
