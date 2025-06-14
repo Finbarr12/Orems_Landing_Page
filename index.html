@@ -1,1158 +1,1465 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OremsNG - Secure Escrow Service</title>
 
+    <!-- icofont-css-link -->
+    <link rel="stylesheet" href="css/icofont.min.css" />
+    <!-- Owl-Carosal-Style-link -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <!-- Bootstrap-Style-link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Aos-Style-link -->
+    <link rel="stylesheet" href="css/aos.css" />
+    <!-- Coustome-Style-link -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Responsive-Style-link -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="images/orems_title.png"
+      type="image/x-icon"
+    />
 
-<!-- Mirrored from kalanidhithemes.com/live-preview/landing-page/apper/all-demo/01-app-landing-page-defoult/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Mar 2025 09:57:27 GMT -->
-<head>
+    <style>
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OremsNG</title>
+      /* Better phone positioning */
+      .banner_slider {
+        position: relative;
+        text-align: center;
+      }
 
-  <!-- icofont-css-link -->
-  <link rel="stylesheet" href="css/icofont.min.css">
-  <!-- Owl-Carosal-Style-link -->
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <!-- Bootstrap-Style-link -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- Aos-Style-link -->
-  <link rel="stylesheet" href="css/aos.css">
-  <!-- Coustome-Style-link -->									
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Responsive-Style-link -->
-  <link rel="stylesheet" href="css/responsive.css">		
-  <!-- Favicon -->						
-  <link rel="shortcut icon" href="images/orems_title.png" type="image/x-icon">
+      .slider_frame img {
+        max-width: 100%;
+        height: auto;
+        filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+      }
 
-</head>
+      .feature_img img {
+        max-width: 100%;
+        height: auto;
+        filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
+      }
 
-<body>
+      .about_img {
+        position: relative;
+        text-align: center;
+      }
 
-  <!-- Page-wrapper-Start -->
-  <div class="page_wrapper">
+      .free_img img {
+        max-width: 100%;
+        height: auto;
+        filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+      }
 
-    <!-- Preloader -->
-    <div id="preloader">
-      <div id="loader"></div>
-    </div>
+      /* Contact section improvements */
+      .contact_info_grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
 
-    <!-- Header Start -->
-    <header>
-      <!-- container start -->
-      <div class="container">
-      	<!-- navigation bar -->
-        <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand" href="#">
-            <img src="images/orems_new.png" alt="image" >
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon">
-              <!-- <i class="icofont-navigation-menu ico_menu"></i> -->
-              <div class="toggle-wrap">
-                <span class="toggle-bar"></span>
-              </div>
-            </span>
-          </button>
+      .contact_card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <!-- secondery menu start -->
-               <li class="nav-item has_dropdown">
-                <a class="nav-link" href="#home">Home</a>
-              </li> 
-              <!-- secondery menu end -->
-                <li class="nav-item has_dropdown">
-                <a class="nav-link" href="#about">About Us</a>
-              </li>
+      .contact_card:hover {
+        transform: translateY(-10px);
+      }
 
-              
-              <li class="nav-item">
-                <a class="nav-link" href="#how_it_work">How it works</a>
-              </li>
-              <!-- secondery menu start -->
-              <li class="nav-item">
-                <a class="nav-link" href="#features">Features</a>
-              </li>
-              <!-- secondery menu end -->
+      .contact_card .icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+      }
 
+      .contact_card .icon img {
+        width: 40px;
+        height: 40px;
+        filter: brightness(0) invert(1);
+      }
 
-              <li class="nav-item">
-                <a class="nav-link" href="#contact_us">Contact Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link dark_btn" href="#contact_us">GET STARTED</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <!-- navigation end -->
+      .contact_card h4 {
+        color: #333;
+        margin-bottom: 15px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .contact_card p,
+      .contact_card a {
+        color: #666;
+        font-size: 16px;
+        text-decoration: none;
+      }
+
+      .contact_card a:hover {
+        color: #6c5ce7;
+      }
+
+      /* Map styling */
+      .map_section {
+        padding: 0;
+      }
+
+      .map_inner iframe {
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Page-wrapper-Start -->
+    <div class="page_wrapper">
+      <!-- Preloader -->
+      <div id="preloader">
+        <div id="loader"></div>
       </div>
-      <!-- container end -->
-    </header>
 
-    <!-- Banner-Section-Start -->
-    <section class="banner_section" id="home">
-      <!-- container start -->
-      <div class="container" id="home">
-      	<!-- vertical animation line -->
-        <div class="anim_line">
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
-        </div>
-        <!-- row start -->
-        <div class="row">
-          <div class="col-lg-6 col-md-12"  data-aos="fade-right" data-aos-duration="1500">
-          	<!-- banner text -->
-            <div class="banner_text">
-              <!-- h1 -->
-              <h1>Secure Transactions,  <span>Trusted Escrow Service.</span></h1>
-              <!-- p -->
-              <p>Buy and sell with confidence using Orems, the escrow service that protects both buyers and sellers. Your funds are securely held until the transaction is successfully completed, ensuring fairness and trust for both parties.</p>
-            </div>
-            <!-- app buttons -->
-            <ul class="app_btn">
-              <li>
-                <a href="#">
-                  <img class="blue_img" src="images/appstore_blue.png" alt="image" >
-                  <img class="white_img" src="images/appstore_white.png" alt="image" >
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img class="blue_img" src="images/googleplay_blue.png" alt="image" >
-                  <img class="white_img" src="images/googleplay_white.png" alt="image" >
-                </a>
-              </li>
-            </ul>
+      <!-- Header Start -->
+      <header>
+        <div class="container">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#home">
+              <img src="images/orems_new.png" alt="Orems Logo" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon">
+                <div class="toggle-wrap">
+                  <span class="toggle-bar"></span>
+                </div>
+              </span>
+            </button>
 
-            <!-- users -->
-            <div class="used_app">
-              <ul>
-                <li><img src="images/used01.png" alt="image" ></li>
-                <li><img src="images/used02.png" alt="image" ></li>
-                <li><img src="images/used03.png" alt="image" ></li>
-                <li><img src="images/used04.png" alt="image" ></li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#how_it_work">How it works</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact_us">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dark_btn" href="#download">Download</a>
+                </li>
               </ul>
-              <p>12M + <br> used this app</p>
             </div>
-          </div>
-
-          <!-- banner slides start -->
-          <div class="col-lg-6 col-md-12"  data-aos="fade-in" data-aos-duration="1500">
-            <div class="banner_slider">
-              <div class="left_icon">
-                <img src="images/message_icon.png" alt="image" >
-              </div>
-              <div class="right_icon">
-                <img src="images/shield_icon.png" alt="image" >
-              </div>
-              
-              <div class="slider_frame">
-                <img src="images/iphone-15-.png" alt="image" >
-              </div>
-            </div>
-          </div>
-          <!-- banner slides end -->
-
+          </nav>
         </div>
-        <!-- row end -->
-      </div>
-      <!-- container end -->
-    </section>
-    <!-- Banner-Section-end -->
+      </header>
 
-     <!-- About Us Section start -->
-      <!-- BredCrumb-Section -->
-    <div class="bred_crumb" id="about">
-      <div class="container">
-        <!-- shape animation  -->
-        <span class="banner_shape1"> <img src="images/banner-shape1.png" alt="image" > </span>
-        <span class="banner_shape2"> <img src="images/banner-shape2.png" alt="image" > </span>
-        <span class="banner_shape3"> <img src="images/banner-shape3.png" alt="image" > </span>
-
-        <div class="bred_text">
-          <h1>About us</h1>
-          <p>Orems is a trusted escrow service that connects buyers and sellers, ensuring secure and hassle-free transactions. <br> Our mission is to provide a safe, transparent, and reliable platform for all your payments. 🚀</p>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- App-Solution-Section-Start -->
-    <section class="row_am app_solution_section">
-      <!-- container start -->
-      <div class="container">
-        <!-- row start -->
-        <div class="row">
-          <div class="col-lg-6">
-            <!-- UI content -->
-            <div class="app_text">
-              <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-                <h2><span>Innovative Solutions for a </span> Seamless Experience.</h2>
-              </div>
-              <p data-aos="fade-up" data-aos-duration="1500">
-                At Orems, we are committed to providing cutting-edge solutions that simplify transactions and enhance security. Our platform is designed to make life easier for buyers and sellers, ensuring trust, transparency, and growth.
-              </p>
-              <p data-aos="fade-up" data-aos-duration="1500">
-                With a focus on innovation and reliability, Orems continues to evolve, offering a secure and seamless way to transact in the digital world.
-              </p>
-            </div>
+      <!-- Banner-Section-Start -->
+      <section class="banner_section" id="home">
+        <div class="container">
+          <div class="anim_line">
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
           </div>
-          <div class="col-lg-6">
-            <div class="app_images" data-aos="fade-in" data-aos-duration="1500">
-              <ul>
-                <li><img src="images/abt_01.png" alt=""></li>
+
+          <div class="row align-items-center">
+            <div
+              class="col-lg-6 col-md-12"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
+              <div class="banner_text">
+                <h1>
+                  Secure Transactions, <span>Trusted Escrow Service.</span>
+                </h1>
+                <p>
+                  Buy and sell with confidence using Orems, the escrow service
+                  that protects both buyers and sellers. Your funds are securely
+                  held until the transaction is successfully completed, ensuring
+                  fairness and trust for both parties.
+                </p>
+              </div>
+
+              <ul class="app_btn">
                 <li>
-                  <a class="popup-youtube play-button"
-                    data-url="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" data-toggle="modal"
-                    data-target="#myModal" title="About Video">
-                    <img src="images/abt_02.png" alt="">
-                    <div class="waves-block">
-                      <div class="waves wave-1"></div>
-                      <div class="waves wave-2"></div>
-                      <div class="waves wave-3"></div>
-                    </div>
-                    <span class="play_icon"><img src="images/play_black.png" alt="image"></span>
+                  <a href="#download">
+                    <img
+                      class="blue_img"
+                      src="images/appstore_blue.png"
+                      alt="App Store"
+                    />
+                    <img
+                      class="white_img"
+                      src="images/appstore_white.png"
+                      alt="App Store"
+                    />
                   </a>
                 </li>
-                <li><img src="images/abt_03.png" alt=""></li>
+                <li>
+                  <a href="#download">
+                    <img
+                      class="blue_img"
+                      src="images/googleplay_blue.png"
+                      alt="Google Play"
+                    />
+                    <img
+                      class="white_img"
+                      src="images/googleplay_white.png"
+                      alt="Google Play"
+                    />
+                  </a>
+                </li>
               </ul>
+
+              <div class="used_app">
+                <ul>
+                  <li><img src="images/used01.png" alt="user" /></li>
+                  <li><img src="images/used02.png" alt="user" /></li>
+                  <li><img src="images/used03.png" alt="user" /></li>
+                  <li><img src="images/used04.png" alt="user" /></li>
+                </ul>
+                <p>
+                  12M + <br />
+                  used this app
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-6 col-md-12"
+              data-aos="fade-in"
+              data-aos-duration="1500"
+            >
+              <div class="banner_slider">
+                <div class="left_icon">
+                  <img src="images/message_icon.png" alt="message icon" />
+                </div>
+                <div class="right_icon">
+                  <img src="images/shield_icon.png" alt="shield icon" />
+                </div>
+
+                <div class="slider_frame">
+                  <img src="images/iphone-15-.png" alt="Orems Mobile App" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <!-- row end -->
-      </div>
-      <!-- container end -->
-    </section>
-    <!-- App-Solution-Section-end -->
+      </section>
 
-
-    <!-- Why we are section Start -->
-    <section class="row_am why_we_section" data-aos="fade-in">
-      <div class="why_inner">
+      <!-- About Us Section -->
+      <div class="bred_crumb" id="about">
         <div class="container">
-          <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-            <h2><span>Why we are different</span> from others!</h2>
-            <p>Orems ensures a secure escrow system, keeping your funds protected until the deal is complete. With fast and reliable transactions, you experience smooth payments without delays. Our 24/7 support is always available to assist you, and our user-friendly platform makes transactions simple and stress-free.</p>
+          <span class="banner_shape1"
+            ><img src="images/banner-shape1.png" alt="shape"
+          /></span>
+          <span class="banner_shape2"
+            ><img src="images/banner-shape2.png" alt="shape"
+          /></span>
+          <span class="banner_shape3"
+            ><img src="images/banner-shape3.png" alt="shape"
+          /></span>
+
+          <div class="bred_text">
+            <h1>About us</h1>
+            <p>
+              Orems is a trusted escrow service that connects buyers and
+              sellers, ensuring secure and hassle-free transactions. <br />
+              Our mission is to provide a safe, transparent, and reliable
+              platform for all your payments. 🚀
+            </p>
           </div>
-          <div class="row">
-            <div class="col-md-6 col-lg-3">
-              <div class="why_box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-                <div class="icon">
-                  <img src="images/secure.png" alt="image">
-                </div>
-                <div class="text">
-                  <h3>Secure code</h3>
-                  <p>Orems is developed with high-level security standards, ensuring your transactions and data remain safe and protected at all times. 
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="why_box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-                <div class="icon">
-                  <img src="images/abt_functional.png" alt="image">
-                </div>
-                <div class="text">
-                  <h3>Fully functional</h3>
-                  <p>Orems offers a seamless and complete escrow experience, ensuring secure, fast, and reliable transactions every time.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="why_box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-                <div class="icon">
-                  <img src="images/communication.png" alt="image">
-                </div>
-                <div class="text">
-                  <h3>Best communication</h3>
-                  <p>Orems ensures clear and seamless communication between buyers and sellers, making transactions smooth and transparent.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="why_box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
-                <div class="icon">
-                  <img src="images/abt_support.png" alt="image">
-                </div>
-                <div class="text">
-                  <h3>24-7 Support</h3>
-                  <p>Our dedicated support team is available 24/7 to assist you with any questions or concerns, ensuring a smooth and hassle-free experience.</p>
-                </div>
-              </div>
-            </div>
-          </di>
         </div>
       </div>
-    </section>
 
-
-    <!-- About-App-Section-Start -->
-    <section class="row_am about_app_section about_page_sectino">
-      <!-- container start -->
-      <div class="container">
-        <!-- row start -->
-        <div class="row">
-          <div class="col-lg-6">
-            <!-- about images -->
-            <div class="abt_img" data-aos="fade-in" data-aos-duration="1500">
-                <img src="images/about_main.png" alt="image">
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <!-- about text -->
-            <div class="about_text">
-              <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-                <!-- h2 --> 
-                <h2> <span>Quality Over Quantity</span>– Our Commitment</h2>
-                <!-- p -->
-                <p>
-                  At Orems, we prioritize excellence and security, ensuring every transaction is safe, seamless, and reliable. Our focus is on delivering the best experience, not just volume.
+      <!-- App-Solution-Section -->
+      <section class="row_am app_solution_section">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="app_text">
+                <div
+                  class="section_title"
+                  data-aos="fade-up"
+                  data-aos-duration="1500"
+                  data-aos-delay="100"
+                >
+                  <h2>
+                    <span>Innovative Solutions for a </span> Seamless
+                    Experience.
+                  </h2>
+                </div>
+                <p data-aos="fade-up" data-aos-duration="1500">
+                  At Orems, we are committed to providing cutting-edge solutions
+                  that simplify transactions and enhance security. Our platform
+                  is designed to make life easier for buyers and sellers,
+                  ensuring trust, transparency, and growth.
+                </p>
+                <p data-aos="fade-up" data-aos-duration="1500">
+                  With a focus on innovation and reliability, Orems continues to
+                  evolve, offering a secure and seamless way to transact in the
+                  digital world.
                 </p>
               </div>
-              <!-- UL -->
-              <ul class="app_statstic" id="counter" data-aos="fade-in" data-aos-duration="1500">
-                <li>
-                  <div class="icon">
-                    <img src="images/download.png" alt="image">
-                  </div>
-                  <div class="text">
-                    <p><span class="counter-value" data-count="17">0</span><span>M+</span></p>
-                    <p>Download</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="icon">
-                    <img src="images/followers.png" alt="image">
-                  </div>
-                  <div class="text">
-                    <p><span class="counter-value" data-count="08">0 </span><span>M+</span></p>
-                    <p>Followers</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="icon">
-                    <img src="images/reviews.png" alt="image">
-                  </div>
-                  <div class="text">
-                    <p><span class="counter-value" data-count="2300">1500</span><span>+</span></p>
-                    <p>Reviews</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="icon">
-                    <img src="images/countries.png" alt="image">
-                  </div>
-                  <div class="text">
-                    <p><span class="counter-value" data-count="150">0</span><span>+</span></p>
-                    <p>Countries</p>
-                  </div>
-                </li>
-              </ul>
-              <!-- UL end -->
+            </div>
+            <div class="col-lg-6">
+              <div
+                class="app_images"
+                data-aos="fade-in"
+                data-aos-duration="1500"
+              >
+                <ul>
+                  <li><img src="images/abt_01.png" alt="about image" /></li>
+                  <li>
+                    <div class="video-placeholder">
+                      <img src="images/abt_02.png" alt="about video" />
+                      <div class="waves-block">
+                        <div class="waves wave-1"></div>
+                        <div class="waves wave-2"></div>
+                        <div class="waves wave-3"></div>
+                      </div>
+                      <span class="play_icon"
+                        ><img src="images/play_black.png" alt="play button"
+                      /></span>
+                    </div>
+                  </li>
+                  <li><img src="images/abt_03.png" alt="about image" /></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        <!-- row end -->
-      </div>
-      <!-- container end -->
-    </section>
-    <!-- About-App-Section-end -->
+      </section>
 
-
-    <!-- Query Section Start -->
-    <section class="row_am query_section">
-      <div class="query_inner" data-aos="fade-in" data-aos-duration="1500">
+      <!-- Why we are different section -->
+      <section class="row_am why_we_section" data-aos="fade-in">
+        <div class="why_inner">
           <div class="container">
-            <!-- shape animation  -->
-            <span class="banner_shape1"> <img src="images/banner-shape1.png" alt="image" > </span>
-            <span class="banner_shape2"> <img src="images/banner-shape2.png" alt="image" > </span>
-            <span class="banner_shape3"> <img src="images/banner-shape3.png" alt="image" > </span>
-        
-              <div class="section_title">
-                  <h2>Have Any Questions? We're Here to Help!</h2>
-                  <p>If you have any queries, feel free to reach out. Our team is ready to assist you with quick and reliable support.</p>
+            <div
+              class="section_title"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="100"
+            >
+              <h2><span>Why we are different</span> from others!</h2>
+              <p>
+                Orems ensures a secure escrow system, keeping your funds
+                protected until the deal is complete. With fast and reliable
+                transactions, you experience smooth payments without delays. Our
+                24/7 support is always available to assist you, and our
+                user-friendly platform makes transactions simple and
+                stress-free.
+              </p>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <div
+                  class="why_box"
+                  data-aos="fade-up"
+                  data-aos-duration="1500"
+                  data-aos-delay="100"
+                >
+                  <div class="icon">
+                    <img src="images/secure.png" alt="secure" />
+                  </div>
+                  <div class="text">
+                    <h3>Secure code</h3>
+                    <p>
+                      Orems is developed with high-level security standards,
+                      ensuring your transactions and data remain safe and
+                      protected at all times.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <a href="contact.html" class="btn white_btn">CONTACT US NOW</a>
+              <div class="col-md-6 col-lg-3">
+                <div
+                  class="why_box"
+                  data-aos="fade-up"
+                  data-aos-duration="1500"
+                  data-aos-delay="200"
+                >
+                  <div class="icon">
+                    <img src="images/abt_functional.png" alt="functional" />
+                  </div>
+                  <div class="text">
+                    <h3>Fully functional</h3>
+                    <p>
+                      Orems offers a seamless and complete escrow experience,
+                      ensuring secure, fast, and reliable transactions every
+                      time.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div
+                  class="why_box"
+                  data-aos="fade-up"
+                  data-aos-duration="1500"
+                  data-aos-delay="300"
+                >
+                  <div class="icon">
+                    <img src="images/communication.png" alt="communication" />
+                  </div>
+                  <div class="text">
+                    <h3>Best communication</h3>
+                    <p>
+                      Orems ensures clear and seamless communication between
+                      buyers and sellers, making transactions smooth and
+                      transparent.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div
+                  class="why_box"
+                  data-aos="fade-up"
+                  data-aos-duration="1500"
+                  data-aos-delay="400"
+                >
+                  <div class="icon">
+                    <img src="images/abt_support.png" alt="support" />
+                  </div>
+                  <div class="text">
+                    <h3>24-7 Support</h3>
+                    <p>
+                      Our dedicated support team is available 24/7 to assist you
+                      with any questions or concerns, ensuring a smooth and
+                      hassle-free experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-      </div>
-    </section>
-     <!-- About Us Section ends -->
-
-
-    <!-- Features-Section-Start -->
-    <section class="row_am features_section" id="features">
-      <!-- container start -->
-      <div class="container">
-        <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-          <!-- h2 -->
-          <h2><span>Features</span> that makes Orems Stand Out!</h2>
-          <!-- p -->
-          <p>Orems isn't just another escrow service—it’s a game-changer in secure transactions. Here’s what makes us different:</p>
-          <p>Orems guarantees secure transactions by holding funds until both parties fulfill their agreement. With fast and reliable payments, there are no unnecessary delays. Our dispute resolution support ensures fair conflict management, while multiple payment options—including cards, bank transfers, and crypto—offer flexibility. Plus, our user-friendly interface makes transactions simple and hassle-free anytime, anywhere. </p>
-
         </div>
-        <div class="feature_detail">
-          <!-- feature box left -->
-          <div class="left_data feature_box">
+      </section>
 
-          	<!-- feature box -->
-            <div class="data_block" data-aos="fade-right" data-aos-duration="1500">
-              <div class="icon">
-                <img src="images/secure_data.png" alt="image" >
-              </div>
-              <div class="text">
-                <h4>Secure Data – Your Privacy, Our Priority</h4>
-                <p>At Orems, we prioritize the security and confidentiality of your data.</div>
-            </div>
-
-            <!-- feature box -->
-            <div class="data_block" data-aos="fade-right" data-aos-duration="1500">
-              <div class="icon">
-                <img src="images/functional.png" alt="image" >
-              </div>
-              <div class="text">
-                <h4>Fully Functional – Seamless & Efficient Transactions</h4>
-                <p>Orems is designed to provide a complete, hassle-free escrow experience with all the features you need to transact securely and effortlessly.</p>
+      <!-- About-App-Section -->
+      <section class="row_am about_app_section about_page_sectino">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="abt_img" data-aos="fade-in" data-aos-duration="1500">
+                <img src="images/about_main.png" alt="about main" />
               </div>
             </div>
-          </div>
+            <div class="col-lg-6">
+              <div class="about_text">
+                <div
+                  class="section_title"
+                  data-aos="fade-up"
+                  data-aos-duration="1500"
+                  data-aos-delay="100"
+                >
+                  <h2><span>Quality Over Quantity</span>– Our Commitment</h2>
+                  <p>
+                    At Orems, we prioritize excellence and security, ensuring
+                    every transaction is safe, seamless, and reliable. Our focus
+                    is on delivering the best experience, not just volume.
+                  </p>
+                </div>
 
-          <!-- feature box right -->
-          <div class="right_data feature_box">
-
-          	<!-- feature box -->
-            <div class="data_block" data-aos="fade-left" data-aos-duration="1500">
-              <div class="icon">
-                <img src="images/live-chat.png" alt="image" >
-              </div>
-              <div class="text">
-                <h4>Live Chat – Instant Support, Anytime You Need It</h4>
-                <p>Get real-time assistance with our 24/7 Live Chat Support. Whether it’s about transactions, disputes, or account setup, our team is always ready to help.</p>
+                <ul
+                  class="app_statstic"
+                  id="counter"
+                  data-aos="fade-in"
+                  data-aos-duration="1500"
+                >
+                  <li>
+                    <div class="icon">
+                      <img src="images/download.png" alt="downloads" />
+                    </div>
+                    <div class="text">
+                      <p>
+                        <span class="counter-value" data-count="17">0</span
+                        ><span>M+</span>
+                      </p>
+                      <p>Download</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <img src="images/followers.png" alt="followers" />
+                    </div>
+                    <div class="text">
+                      <p>
+                        <span class="counter-value" data-count="08">0</span
+                        ><span>M+</span>
+                      </p>
+                      <p>Followers</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <img src="images/reviews.png" alt="reviews" />
+                    </div>
+                    <div class="text">
+                      <p>
+                        <span class="counter-value" data-count="2300">1500</span
+                        ><span>+</span>
+                      </p>
+                      <p>Reviews</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <img src="images/countries.png" alt="countries" />
+                    </div>
+                    <div class="text">
+                      <p>
+                        <span class="counter-value" data-count="150">0</span
+                        ><span>+</span>
+                      </p>
+                      <p>Countries</p>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
-
-            <!-- feature box -->
-            <div class="data_block" data-aos="fade-left" data-aos-duration="1500">
-              <div class="icon">
-                <img src="images/support.png" alt="image" >
-              </div>
-              <div class="text">
-                <h4>24/7 Support – We're Always Here for You</h4>
-                <p>Get round-the-clock assistance whenever you need it. Our support team is available 24/7 to help with transactions, disputes, and any inquiries.</p>
-              </div>
-            </div>
-
-          </div>
-          <!-- feature image -->
-          <div class="feature_img" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-            <img src="images/samsungGalaxy.png" alt="image" >
           </div>
         </div>
-      </div>
-      <!-- container end -->
-    </section>
-    <!-- Features-Section-end -->
+      </section>
 
-    <!-- About-App-Section-Start -->
-    <section class="row_am about_app_section">
-      <!-- container start -->
-      <div class="container">
-      	<!-- row start -->
-        <div class="row">
-          <div class="col-lg-6">
+      <!-- Features-Section -->
+      <section class="row_am features_section" id="features">
+        <div class="container">
+          <div
+            class="section_title"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="100"
+          >
+            <h2><span>Features</span> that makes Orems Stand Out!</h2>
+            <p>
+              Orems isn't just another escrow service—it's a game-changer in
+              secure transactions. Here's what makes us different:
+            </p>
+            <p>
+              Orems guarantees secure transactions by holding funds until both
+              parties fulfill their agreement. With fast and reliable payments,
+              there are no unnecessary delays. Our dispute resolution support
+              ensures fair conflict management, while multiple payment
+              options—including cards, bank transfers, and crypto—offer
+              flexibility. Plus, our user-friendly interface makes transactions
+              simple and hassle-free anytime, anywhere.
+            </p>
+          </div>
 
-          	<!-- about images -->
-            <div class="about_img" data-aos="fade-in" data-aos-duration="1500">
-              <div class="frame_img">
-                <img class="moving_position_animatin" src="images/about-frame.png" alt="image" >
+          <div class="feature_detail">
+            <div class="left_data feature_box">
+              <div
+                class="data_block"
+                data-aos="fade-right"
+                data-aos-duration="1500"
+              >
+                <div class="icon">
+                  <img src="images/secure_data.png" alt="secure data" />
+                </div>
+                <div class="text">
+                  <h4>Secure Data – Your Privacy, Our Priority</h4>
+                  <p>
+                    At Orems, we prioritize the security and confidentiality of
+                    your data.
+                  </p>
+                </div>
               </div>
-              <div class="screen_img">
-                <img class="moving_animation" src="images/about-screen.png" alt="image" >
+
+              <div
+                class="data_block"
+                data-aos="fade-right"
+                data-aos-duration="1500"
+              >
+                <div class="icon">
+                  <img src="images/functional.png" alt="functional" />
+                </div>
+                <div class="text">
+                  <h4>Fully Functional – Seamless & Efficient Transactions</h4>
+                  <p>
+                    Orems is designed to provide a complete, hassle-free escrow
+                    experience with all the features you need to transact
+                    securely and effortlessly.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="right_data feature_box">
+              <div
+                class="data_block"
+                data-aos="fade-left"
+                data-aos-duration="1500"
+              >
+                <div class="icon">
+                  <img src="images/live-chat.png" alt="live chat" />
+                </div>
+                <div class="text">
+                  <h4>Live Chat – Instant Support, Anytime You Need It</h4>
+                  <p>
+                    Get real-time assistance with our 24/7 Live Chat Support.
+                    Whether it's about transactions, disputes, or account setup,
+                    our team is always ready to help.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="data_block"
+                data-aos="fade-left"
+                data-aos-duration="1500"
+              >
+                <div class="icon">
+                  <img src="images/support.png" alt="support" />
+                </div>
+                <div class="text">
+                  <h4>24/7 Support – We're Always Here for You</h4>
+                  <p>
+                    Get round-the-clock assistance whenever you need it. Our
+                    support team is available 24/7 to help with transactions,
+                    disputes, and any inquiries.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="feature_img"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="100"
+            >
+              <img src="images/samsungGalaxy.png" alt="Samsung Galaxy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About-App-Section -->
+      <section class="row_am about_app_section">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div
+                class="about_img"
+                data-aos="fade-in"
+                data-aos-duration="1500"
+              >
+                <div class="frame_img">
+                  <img
+                    class="moving_position_animatin"
+                    src="images/about-frame.png"
+                    alt="phone frame"
+                  />
+                </div>
+                <div class="screen_img">
+                  <img
+                    class="moving_animation"
+                    src="images/about-screen.png"
+                    alt="phone screen"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="about_text">
+                <div
+                  class="section_title"
+                  data-aos="fade-up"
+                  data-aos-duration="1500"
+                  data-aos-delay="100"
+                >
+                  <h2>Why Orems Stands Out</h2>
+                  <p>
+                    Orems is more than just an escrow service—it's a secure,
+                    reliable, and seamless way to buy and sell with confidence.
+                    Whether you're making a purchase or closing a deal, Orems
+                    ensures safe transactions, instant support, and complete
+                    peace of mind.
+                  </p>
+                  <p>
+                    🚀 Fast. Secure. Trusted.<br />🔒 Experience hassle-free
+                    transactions today!
+                  </p>
+                </div>
+
+                <ul
+                  class="app_statstic"
+                  data-aos="fade-in"
+                  data-aos-duration="1500"
+                >
+                  <li>
+                    <div class="icon">
+                      <img src="images/download.png" alt="downloads" />
+                    </div>
+                    <div class="text">
+                      <p>
+                        <span class="counter-value" data-count="17">0</span
+                        ><span>M+</span>
+                      </p>
+                      <p>Download</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <img src="images/followers.png" alt="followers" />
+                    </div>
+                    <div class="text">
+                      <p>
+                        <span class="counter-value" data-count="08">0</span
+                        ><span>M+</span>
+                      </p>
+                      <p>Followers</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <img src="images/reviews.png" alt="reviews" />
+                    </div>
+                    <div class="text">
+                      <p>
+                        <span class="counter-value" data-count="2300">1500</span
+                        ><span>+</span>
+                      </p>
+                      <p>Reviews</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <img src="images/countries.png" alt="countries" />
+                    </div>
+                    <div class="text">
+                      <p>
+                        <span class="counter-value" data-count="150">0</span
+                        ><span>+</span>
+                      </p>
+                      <p>Countries</p>
+                    </div>
+                  </li>
+                </ul>
+
+                <a
+                  href="#download"
+                  class="btn puprple_btn"
+                  data-aos="fade-in"
+                  data-aos-duration="1500"
+                  >START FREE TRIAL</a
+                >
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+        </div>
+      </section>
 
-          	<!-- about text -->
-            <div class="about_text">
-              <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+      <!-- How-It-Works-Section -->
+      <section class="row_am how_it_works" id="how_it_work">
+        <div class="container">
+          <div class="how_it_inner">
+            <div
+              class="section_title"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="300"
+            >
+              <h2><span>How it works</span> - 3 easy steps</h2>
+              <p>
+                Orems makes transactions simple and secure in three steps:
+                <br />
+                the buyer deposits funds, the seller delivers the product or
+                service, and payment is released once the buyer confirms
+                receipt.
+              </p>
+            </div>
 
-              	<!-- h2 -->
-                <h2>Why Orems Stands Out</h2>
-
-                <!-- p -->
-                <p>
-                  Orems is more than just an escrow service—it’s a secure, reliable, and seamless way to buy and sell with confidence. Whether you're making a purchase or closing a deal, Orems ensures safe transactions, instant support, and complete peace of mind. <br>
-
-🚀 Fast. Secure. Trusted.<br>
-
-🔒 Experience hassle-free transactions today!
-                </p>
-              </div>
-
-              <!-- UL -->
-              <ul class="app_statstic" id="counter" data-aos="fade-in" data-aos-duration="1500">
+            <div class="step_block">
+              <ul>
                 <li>
-                  <div class="icon">
-                    <img src="images/download.png" alt="image" >
+                  <div
+                    class="step_text"
+                    data-aos="fade-right"
+                    data-aos-duration="1500"
+                  >
+                    <h4>Download app</h4>
+                    <div class="app_icon">
+                      <a href="#download"
+                        ><i class="icofont-brand-android-robot"></i
+                      ></a>
+                      <a href="#download"
+                        ><i class="icofont-brand-apple"></i
+                      ></a>
+                      <a href="#download"
+                        ><i class="icofont-brand-windows"></i
+                      ></a>
+                    </div>
+                    <p>
+                      Get Orems on Windows, Mac, or Android and enjoy secure
+                      transactions anytime, anywhere.
+                    </p>
                   </div>
-                  <div class="text">
-                    <p><span class="counter-value" data-count="17">0</span><span>M+</span></p>
-                    <p>Download</p>
+                  <div class="step_number">
+                    <h3>01</h3>
+                  </div>
+                  <div
+                    class="step_img"
+                    data-aos="fade-left"
+                    data-aos-duration="1500"
+                  >
+                    <img src="images/download_app.jpg" alt="download app" />
                   </div>
                 </li>
+
                 <li>
-                  <div class="icon">
-                    <img src="images/followers.png" alt="image" >
+                  <div
+                    class="step_text"
+                    data-aos="fade-left"
+                    data-aos-duration="1500"
+                  >
+                    <h4>Create an account</h4>
+                    <p>
+                      Sign up for free. One account works seamlessly across all
+                      your devices. 🚀
+                    </p>
                   </div>
-                  <div class="text">
-                    <p><span class="counter-value" data-count="08">0 </span><span>M+</span></p>
-                    <p>Followers</p>
+                  <div class="step_number">
+                    <h3>02</h3>
+                  </div>
+                  <div
+                    class="step_img"
+                    data-aos="fade-right"
+                    data-aos-duration="1500"
+                  >
+                    <img src="images/create_account.jpg" alt="create account" />
                   </div>
                 </li>
+
                 <li>
-                  <div class="icon">
-                    <img src="images/reviews.png" alt="image" >
+                  <div
+                    class="step_text"
+                    data-aos="fade-right"
+                    data-aos-duration="1500"
+                  >
+                    <h4>It's Done, Enjoy the App</h4>
+                    <span
+                      >You're all set! 🚀 Explore, experience, and share the app
+                      for the best transaction security.</span
+                    >
+                    <p>
+                      💬 Have questions? Check out our FAQs for quick answers.
+                    </p>
                   </div>
-                  <div class="text">
-                    <p><span class="counter-value" data-count="2300">1500</span><span>+</span></p>
-                    <p>Reviews</p>
+                  <div class="step_number">
+                    <h3>03</h3>
                   </div>
-                </li>
-                <li>
-                  <div class="icon">
-                    <img src="images/countries.png" alt="image" >
-                  </div>
-                  <div class="text">
-                    <p><span class="counter-value" data-count="150">0</span><span>+</span></p>
-                    <p>Countries</p>
+                  <div
+                    class="step_img"
+                    data-aos="fade-left"
+                    data-aos-duration="1500"
+                  >
+                    <img src="images/enjoy_app.jpg" alt="enjoy app" />
                   </div>
                 </li>
               </ul>
-              <!-- UL end -->
-              <a href="contact.html" class="btn puprple_btn" data-aos="fade-in" data-aos-duration="1500">START FREE TRIAL</a>
             </div>
           </div>
         </div>
-        <!-- row end -->
-      </div>
-      <!-- container end -->
-    </section>
-    <!-- About-App-Section-end -->
+      </section>
 
-
-    <!-- How-It-Workes-Section-Start -->
-    <section class="row_am how_it_works" id="how_it_work">
-      <!-- container start -->
-      <div class="container">
-        <div class="how_it_inner">
-          <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-          	<!-- h2 -->
-            <h2><span>How it works</span> - 3 easy steps</h2>
-            <!-- p -->
-            <p>Orems makes transactions simple and secure in three steps: <br> the buyer deposits funds, the seller delivers the product or service, and payment is released once the buyer confirms receipt.</p>
+      <!-- Testimonial-Section -->
+      <section class="row_am testimonial_section">
+        <div class="container">
+          <div
+            class="section_title"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="300"
+          >
+            <h2>What Our <span>Customer Say</span></h2>
+            <p>
+              Hear from our satisfied users who trust Orems for secure and
+              hassle-free transactions. Their experiences speak for themselves!
+              🚀
+            </p>
           </div>
-          <div class="step_block">
-          	<!-- UL -->
-            <ul>
-              <!-- step -->
-              <li>
-                <div class="step_text" data-aos="fade-right" data-aos-duration="1500">
-                  <h4>Download app</h4>
-                  <div class="app_icon">
-                    <a href="#"><i class="icofont-brand-android-robot"></i></a>
-                    <a href="#"><i class="icofont-brand-apple"></i></a>
-                    <a href="#"><i class="icofont-brand-windows"></i></a>
+
+          <div
+            class="testimonial_block"
+            data-aos="fade-in"
+            data-aos-duration="1500"
+          >
+            <div id="testimonial_slider" class="owl-carousel owl-theme">
+              <div class="item">
+                <div class="testimonial_slide_box">
+                  <div class="rating">
+                    <span><i class="icofont-star"></i></span>
+                    <span><i class="icofont-star"></i></span>
+                    <span><i class="icofont-star"></i></span>
+                    <span><i class="icofont-star"></i></span>
+                    <span><i class="icofont-star"></i></span>
                   </div>
-                  <p>Get Orems on Windows, Mac, or Android and enjoy secure transactions anytime, anywhere.</p>
+                  <p class="review">
+                    "Orems has completely transformed how I handle transactions.
+                    Secure, fast, and reliable—highly recommended!" 🚀
+                  </p>
+                  <div class="testimonial_img">
+                    <img src="images/testimonial_user1.png" alt="Shayna John" />
+                  </div>
+                  <h3>Shayna John</h3>
+                  <span class="designation">Creative inc</span>
                 </div>
-                <div class="step_number">
-                  <h3>01</h3>
-                </div>
-                <div class="step_img" data-aos="fade-left" data-aos-duration="1500">
-                  <img src="images/download_app.jpg" alt="image" >
-                </div>
-              </li>
+              </div>
 
-              <!-- step -->
-              <li>
-                <div class="step_text" data-aos="fade-left" data-aos-duration="1500">
-                  <h4>Create an account</h4>
-                  <!-- <span>14 days free trial</span> -->
-                  <p>Sign up for free. One account works seamlessly across all your devices. 🚀</p>
+              <div class="item">
+                <div class="testimonial_slide_box">
+                  <div class="rating">
+                    <span><i class="icofont-star"></i></span>
+                    <span><i class="icofont-star"></i></span>
+                    <span><i class="icofont-star"></i></span>
+                    <span><i class="icofont-star"></i></span>
+                    <span><i class="icofont-star"></i></span>
+                  </div>
+                  <p class="review">
+                    "Orems makes transactions seamless and secure. A
+                    game-changer for buyers and sellers!" 🚀
+                  </p>
+                  <div class="testimonial_img">
+                    <img src="images/testimonial_user2.png" alt="William Den" />
+                  </div>
+                  <h3>William Den</h3>
+                  <span class="designation">Tech Solutions</span>
                 </div>
-                <div class="step_number"> 
-                  <h3>02</h3>
-                </div>
-                <div class="step_img" data-aos="fade-right" data-aos-duration="1500">
-                  <img src="images/create_account.jpg" alt="image" >
-                </div>
-              </li>
+              </div>
 
-              <!-- step -->
-              <li>
-                <div class="step_text" data-aos="fade-right" data-aos-duration="1500">
-                  <h4>It’s Done, Enjoy the App</h4>
-                  <span>You're all set! 🚀 Explore, experience, and share the app for the best transaction security.</span>
-                  <p>💬 Have questions? Check out our  <a href="#">FAQs</a> for quick answers.</p>
+              <div class="item">
+                <div class="testimonial_slide_box">
+                  <div class="rating">
+                    <span><i class="icofont-star"></i></span>
+                    <span><i class="icofont-star"></i></span>
+                    <span><i class="icofont-star"></i></span>
+                    <span><i class="icofont-star"></i></span>
+                    <span><i class="icofont-star"></i></span>
+                  </div>
+                  <p class="review">
+                    "Orems provides a hassle-free and secure way to transact.
+                    Trustworthy and highly efficient!" 🚀
+                  </p>
+                  <div class="testimonial_img">
+                    <img
+                      src="images/testimonial_user3.png"
+                      alt="Cyrus Stephen"
+                    />
+                  </div>
+                  <h3>Cyrus Stephen</h3>
+                  <span class="designation">Digital Agency</span>
                 </div>
-                <div class="step_number">
-                  <h3>03</h3>
-                </div>
-                <div class="step_img" data-aos="fade-left" data-aos-duration="1500">
-                  <img src="images/enjoy_app.jpg" alt="image" >
-                </div>
-              </li>
-            </ul>
+              </div>
+            </div>
+
+            <div class="total_review">
+              <div class="rating">
+                <span><i class="icofont-star"></i></span>
+                <span><i class="icofont-star"></i></span>
+                <span><i class="icofont-star"></i></span>
+                <span><i class="icofont-star"></i></span>
+                <span><i class="icofont-star"></i></span>
+                <p>5.0 / 5.0</p>
+              </div>
+              <h3>2578</h3>
+              <p>TOTAL USER REVIEWS</p>
+            </div>
+
+            <div class="avtar_faces">
+              <img src="images/avtar_testimonial.png" alt="user avatars" />
+            </div>
           </div>
         </div>
+      </section>
 
-      </div>
-      <!-- container end -->
-    </section>
-    <!-- How-It-Workes-Section-end -->
+      <!-- Contact Us Section -->
+      <div class="bred_crumb" id="contact_us">
+        <div class="container">
+          <span class="banner_shape1"
+            ><img src="images/banner-shape1.png" alt="shape"
+          /></span>
+          <span class="banner_shape2"
+            ><img src="images/banner-shape2.png" alt="shape"
+          /></span>
+          <span class="banner_shape3"
+            ><img src="images/banner-shape3.png" alt="shape"
+          /></span>
 
-    <!-- Testimonial-Section start -->
-    <section class="row_am testimonial_section"> 
-      <!-- container start -->
-      <div class="container">
-        <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-          <!-- h2 -->
-          <h2>What Our <span>Customer Say</span></h2>
-          <!-- p -->
-          <p>Hear from our satisfied users who trust Orems for secure and hassle-free transactions. Their experiences speak for themselves! 🚀</p>
-        </div>
-        <div class="testimonial_block" data-aos="fade-in" data-aos-duration="1500">
-          <div id="testimonial_slider" class="owl-carousel owl-theme">
-          	<!-- user 1 -->
-            <div class="item">
-              <div class="testimonial_slide_box">
-                <div class="rating">
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                </div>
-                <p class="review">
-                  "Orems has completely transformed how I handle transactions. Secure, fast, and reliable—highly recommended!" 🚀
-                </p>
-                <div class="testimonial_img">
-                  <img src="images/testimonial_user1.png" alt="image" >
-                </div>
-                <h3>Shayna John</h3>
-                <span class="designation">Careative inc</span>
-              </div>
-            </div>
-
-            <!-- user 2 -->
-            <div class="item">
-              <div class="testimonial_slide_box">
-                <div class="rating">
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                </div>
-                <p class="review">
-                  "Orems makes transactions seamless and secure. A game-changer for buyers and sellers!" 🚀
-                </p>
-                <div class="testimonial_img">
-                  <img src="images/testimonial_user2.png" alt="image" >
-                </div>
-                <h3>Willium Den</h3>
-                <span class="designation">Careative inc</span>
-              </div>
-            </div>
-            
-            <!-- user 3 -->
-            <div class="item">
-              <div class="testimonial_slide_box">
-                <div class="rating">
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                </div>
-                <p class="review">
-                  "Orems provides a hassle-free and secure way to transact. Trustworthy and highly efficient!" 🚀
-                </p>
-                <div class="testimonial_img">
-                  <img src="images/testimonial_user3.png" alt="image" >
-                </div>
-                <h3>Cyrus Stephen</h3>
-                <span class="designation">Careative inc</span>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- total review -->
-          <div class="total_review">
-            <div class="rating">
-              <span><i class="icofont-star"></i></span>
-              <span><i class="icofont-star"></i></span>
-              <span><i class="icofont-star"></i></span>
-              <span><i class="icofont-star"></i></span>
-              <span><i class="icofont-star"></i></span>
-              <p>5.0 / 5.0</p>
-            </div>
-            <h3>2578</h3>
-            <a href="#">TOTAL USER REVIEWS <i class="icofont-arrow-right"></i></a>
-          </div>
-
-          <!-- avtar faces -->
-          <div class="avtar_faces">
-            <img src="images/avtar_testimonial.png" alt="image" >
+          <div class="bred_text">
+            <h1>Contact us</h1>
+            <p>
+              Have a question? Reach out to us, and we'll get back to you
+              quickly! 🚀
+            </p>
           </div>
         </div>
       </div>
-      <!-- container end -->
-    </section>
-    <!-- Testimonial-Section end -->
 
-    <!-- BredCrumb-Section -->
-    <div class="bred_crumb" id="contact_us">
-      <div class="container">
-        <!-- shape animation  -->
-        <span class="banner_shape1"> <img src="images/banner-shape1.png" alt="image" > </span>
-        <span class="banner_shape2"> <img src="images/banner-shape2.png" alt="image" > </span>
-        <span class="banner_shape3"> <img src="images/banner-shape3.png" alt="image" > </span>
-        
-        <div class="bred_text">
-          <h1>Contact us</h1>
-          <p>Have a question? Reach out to us, and we’ll get back to you quickly! 🚀</p>
-        </div>
-      </div>
-    </div>  
-    
+      <section class="contact_page_section">
+        <div class="container">
+          <div
+            class="section_title text-center"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <h2>Get in <span>Touch</span></h2>
+            <p>
+              We're here to help! Reach out to us through any of the following
+              channels
+            </p>
+          </div>
 
-    <!-- Contact Us Section Start -->
-    <section class="contact_page_section">
-      <div class="container">
-          <div class="contact_inner">
-              <div class="contact_form">
-                <div class="section_title">
-                    <h2>Leave a <span>message</span></h2>
-                    <p>Fill up form below, our team will get back soon</p>
-                </div>
-                  <form action="#">
-                    <div class="form-group">
-                        <input type="text" placeholder="Name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Company Name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <select class="form-control">
-                          <option value="">Country</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Phone" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Website" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" placeholder="Your message"></textarea>
-                    </div>
-                    <div class="form-group term_check">
-                      <input type="checkbox" id="term">
-                      <label for="term">I agree to receive emails, newsletters and promotional messages</label>
-                    </div>
-                    <div class="form-group mb-0">
-                      <button type="submit" class="btn puprple_btn">SEND MESSAGE</button>
-                    </div>
-                  </form>
+          <div class="contact_info_grid">
+            <div
+              class="contact_card"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="100"
+            >
+              <div class="icon">
+                <img src="images/mail_icon.png" alt="email" />
               </div>
-              <div class="contact_info">
-                  <div class="icon"><img src="images/contact_message_icon.png" alt="image"></div>
+              <h4>Email Us</h4>
+              <p><a href="mailto:support@orems.com">support@orems.com</a></p>
+              <p><a href="mailto:info@orems.com">info@orems.com</a></p>
+            </div>
+
+            <div
+              class="contact_card"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="200"
+            >
+              <div class="icon">
+                <img src="images/call_icon.png" alt="phone" />
+              </div>
+              <h4>Call Us</h4>
+              <p><a href="tel:+1(888)553-46-11">+1 (888) 553-46-11</a></p>
+              <p><a href="tel:+1(888)553-46-12">+1 (888) 553-46-12</a></p>
+            </div>
+
+            <div
+              class="contact_card"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="300"
+            >
+              <div class="icon">
+                <img src="images/location_icon.png" alt="location" />
+              </div>
+              <h4>Visit Us</h4>
+              <p>
+                5687, Business Avenue<br />New York, NY 10001<br />United States
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Map Section -->
+      <section class="row_am map_section">
+        <div class="container">
+          <div class="map_inner" data-aos="fade-up" data-aos-duration="1500">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799160891!2d-74.25987584510595!3d40.69767006338158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1664399300741!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ-Section -->
+      <section class="row_am faq_section">
+        <div class="container">
+          <div
+            class="section_title"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="300"
+          >
+            <h2><span>FAQ</span> - Frequently Asked Questions</h2>
+            <p>
+              Our escrow system is designed to protect both buyers and sellers,
+              ensuring fairness in every transaction.<br />
+              Still have questions? Contact our customer support team for
+              assistance! 🚀
+            </p>
+          </div>
+
+          <div class="faq_panel">
+            <div class="accordion" id="accordionExample">
+              <div class="card" data-aos="fade-up" data-aos-duration="1500">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button
+                      type="button"
+                      class="btn btn-link active"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                    >
+                      <i class="icon_faq icofont-plus"></i> How can I pay?
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapseOne"
+                  class="collapse show"
+                  aria-labelledby="headingOne"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    <p>
+                      Orems supports multiple payment methods to ensure
+                      convenience and security. You can make payments using:
+                    </p>
+                    <ul>
+                      <li>Credit/Debit Cards (Visa, MasterCard, etc.)</li>
+                      <li>Bank Transfers</li>
+                      <li>Cryptocurrency (where applicable)</li>
+                      <li>Other Secure Payment Gateways</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" data-aos="fade-up" data-aos-duration="1500">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button
+                      type="button"
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                    >
+                      <i class="icon_faq icofont-plus"></i> How to setup
+                      account?
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="collapse"
+                  aria-labelledby="headingTwo"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    <p>Setting up an Orems account is simple and fast:</p>
+                    <ol>
+                      <li>
+                        Visit our website and click on the Sign Up button.
+                      </li>
+                      <li>
+                        Enter your details (name, email, phone number, and
+                        preferred password).
+                      </li>
+                      <li>
+                        Verify your email through the confirmation link sent to
+                        your inbox.
+                      </li>
+                      <li>
+                        Complete your profile by adding payment details and
+                        verifying your identity (if required).
+                      </li>
+                      <li>Start transacting securely with Orems!</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" data-aos="fade-up" data-aos-duration="1500">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button
+                      type="button"
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#collapseThree"
+                    >
+                      <i class="icon_faq icofont-plus"></i> What is process to
+                      get refund?
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="collapse"
+                  aria-labelledby="headingThree"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    <p>
+                      If a transaction does not go as planned, Orems ensures a
+                      fair refund process:
+                    </p>
+                    <ol>
+                      <li>
+                        File a Dispute – If the buyer does not receive the
+                        agreed-upon product/service, they can request a refund
+                        through their dashboard.
+                      </li>
+                      <li>
+                        Review & Mediation – Orems reviews the transaction
+                        details and communicates with both parties to resolve
+                        the issue.
+                      </li>
+                      <li>
+                        Refund Approval – If the claim is valid, the buyer will
+                        receive a refund back to their original payment method.
+                      </li>
+                      <li>
+                        Resolution – If both parties agree on a solution (such
+                        as partial refunds or a new delivery), Orems facilitates
+                        the process.
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Download-Free-App-section -->
+      <section class="row_am free_app_section" id="download">
+        <div class="container">
+          <div
+            class="free_app_inner"
+            data-aos="fade-in"
+            data-aos-duration="1500"
+            data-aos-delay="100"
+          >
+            <div class="anim_line dark_bg">
+              <span><img src="images/anim_line.png" alt="anim_line" /></span>
+              <span><img src="images/anim_line.png" alt="anim_line" /></span>
+              <span><img src="images/anim_line.png" alt="anim_line" /></span>
+              <span><img src="images/anim_line.png" alt="anim_line" /></span>
+              <span><img src="images/anim_line.png" alt="anim_line" /></span>
+              <span><img src="images/anim_line.png" alt="anim_line" /></span>
+              <span><img src="images/anim_line.png" alt="anim_line" /></span>
+              <span><img src="images/anim_line.png" alt="anim_line" /></span>
+              <span><img src="images/anim_line.png" alt="anim_line" /></span>
+            </div>
+
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <div class="free_text">
                   <div class="section_title">
-                    <h2>Have any <span>question?</span></h2>
-                    <p>If you have any question about our product, service, payment or company, Visit our <a href="faq.html">FAQs page.</a></p>
+                    <h2>Download for Free on Apple & Play Store</h2>
+                    <p>
+                      Get instant access to Orems on the App Store and Google
+                      Play. Download now and enjoy secure and seamless
+                      transactions anytime, anywhere!
+                    </p>
                   </div>
-                  <a href="faq.html" class="btn puprple_btn">READ FAQ</a>
-                  <ul class="contact_info_list">
+                  <ul class="app_btn">
                     <li>
-                      <div class="img">
-                        <img src="images/mail_icon.png" alt="image">
-                      </div>
-                      <div class="text">
-                        <span>Email Us</span>
-                        <a href="mailto:example@gmail.com">example@gmail.com</a>
-                      </div>
+                      <a href="#" onclick="return false;">
+                        <img src="images/appstore_blue.png" alt="App Store" />
+                      </a>
                     </li>
                     <li>
-                      <div class="img">
-                        <img src="images/call_icon.png" alt="image">
-                      </div>
-                      <div class="text">
-                        <span>Call Us</span>
-                        <a href="tel:+1(888)553-46-11">+1 (888) 553-46-11</a>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="img">
-                        <img src="images/location_icon.png" alt="image">
-                      </div>
-                      <div class="text">
-                        <span>Visit Us</span>
-                        <p>5687, Business Avenue, New York, USA 5687</p>
-                      </div>
+                      <a href="#" onclick="return false;">
+                        <img
+                          src="images/googleplay_blue.png"
+                          alt="Google Play"
+                        />
+                      </a>
                     </li>
                   </ul>
+                </div>
               </div>
-          </div>
-      </div>
-    </section>
-    <!-- Contact Us Section End -->
 
-
-    <!-- Map Section Start -->
-    <section class="row_am map_section">
-      <div class="container">
-          <div class="map_inner">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799160891!2d-74.25987584510595!3d40.69767006338158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1664399300741!5m2!1sen!2sin" width="100%" height="510" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-      </div>
-    </section>
-    <!-- Map Section End -->
-
-    <!-- FAQ-Section start -->
-    <section class="row_am faq_section">
-      <!-- container start -->
-      <div class="container">
-        <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-          <!-- h2 -->
-          <h2><span>FAQ</span> - Frequently Asked Questions</h2>
-          <!-- p -->
-          <p>Our escrow system is designed to protect both buyers and sellers, ensuring fairness in every transaction.<br>
-            Still have questions?  Contact our customer support team for assistance! 🚀
-          </p>
-        </div>
-        <!-- faq data -->
-        <div class="faq_panel">
-          <div class="accordion" id="accordionExample">
-            <div class="card" data-aos="fade-up" data-aos-duration="1500">
-              <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                  <button type="button" class="btn btn-link active" data-toggle="collapse" data-target="#collapseOne">
-                  	<i class="icon_faq icofont-plus"></i></i> How can i pay ?</button>
-                </h2>
-              </div>
-              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>Orems supports multiple payment methods to ensure convenience and security. You can make payments using</p>
-                         <ul>
-                        <li>Credit/Debit Cards (Visa, MasterCard, etc.)</li>
-                        <li>Bank Transfers</li>
-                        <li>Cryptocurrency (where applicable)</li>
-                        <li>Other Secure Payment Gateways</li>
-                      </ul>
+              <div class="col-md-6">
+                <div class="free_img">
+                  <img
+                    class="mobile_mockup"
+                    src="images/iphone-15-.png"
+                    alt="Orems Mobile App"
+                  />
                 </div>
               </div>
             </div>
-            <div class="card" data-aos="fade-up" data-aos-duration="1500">
-              <div class="card-header" id="headingTwo">
-                <h2 class="mb-0">
-                  <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
-                    data-target="#collapseTwo"><i class="icon_faq icofont-plus"></i></i> How to setup account ?</button>
-                </h2>
-              </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>Setting up an Orems account is simple and fast:</p>
-                      <ol>
-                        <li>Visit our website and click on the Sign Up button.</li>
-                        <li>Enter your details (name, email, phone number, and preferred password).</li>
-                        <li>Verify your email through the confirmation link sent to your inbox.</li>
-                        <li>Complete your profile by adding payment details and verifying your identity (if required).</li>
-                        <li>Start transacting securely with Orems!</li>
-                      </ol>
-                </div>
-              </div>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-duration="1500">
-              <div class="card-header" id="headingThree">
-                <h2 class="mb-0">
-                  <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
-                    data-target="#collapseThree"><i class="icon_faq icofont-plus"></i></i>What is process to get refund
-                    ?</button>
-                </h2>
-              </div>
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>If a transaction does not go as planned, Orems ensures a fair refund process:</p>
-                  <ol>
-                    <li>File a Dispute – If the buyer does not receive the agreed-upon product/service, they can request a refund through their dashboard.</li>
-                    <li>Review & Mediation – Orems reviews the transaction details and communicates with both parties to resolve the issue.</li>
-                    <li>Refund Approval – If the claim is valid, the buyer will receive a refund back to their original payment method.</li>
-                    <li>Resolution – If both parties agree on a solution (such as partial refunds or a new delivery), Orems facilitates the process.</li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-            <!-- <div class="card" data-aos="fade-up" data-aos-duration="1500">
-              <div class="card-header" id="headingFour">
-                <h2 class="mb-0">
-                  <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
-                    data-target="#collapseFour"><i class="icon_faq icofont-plus"></i></i>What is process to get refund
-                    ?</button>
-                </h2>
-              </div>
-              <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has. been the
-                    industrys standard dummy text ever since the when an unknown printer took a galley of type and
-                    scrambled it to make a type specimen book. It has survived not only five cen turies but also the
-                    leap into electronic typesetting, remaining essentially unchanged.</p>
-                </div>
-              </div>
-            </div> -->
           </div>
         </div>
-      </div>
-      <!-- container end -->
-    </section>
-    <!-- FAQ-Section end -->
+      </section>
 
-    <!-- Beautifull-interface-Section start -->
-    <section class="row_am interface_section">
-	  <!-- container start -->
-      <div class="container-fluid">
-        <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-            <!-- h2 -->
-           
-        </div>
-
-          <!-- screen slider start -->
-
-          <!-- screen slider end -->
-      </div>
-      <!-- container end -->
-    </section>
-    <!-- Beautifull-interface-Section end -->
-
-    <!-- Download-Free-App-section-Start  -->
-    <section class="row_am free_app_section" id="getstarted">
-    	<!-- container start -->
-        <div class="container">
-            <div class="free_app_inner" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="100"> 
-              <!-- vertical line animation -->
-              <div class="anim_line dark_bg">
-                <span><img src="images/anim_line.png" alt="anim_line"></span>
-                <span><img src="images/anim_line.png" alt="anim_line"></span>
-                <span><img src="images/anim_line.png" alt="anim_line"></span>
-                <span><img src="images/anim_line.png" alt="anim_line"></span>
-                <span><img src="images/anim_line.png" alt="anim_line"></span>
-                <span><img src="images/anim_line.png" alt="anim_line"></span>
-                <span><img src="images/anim_line.png" alt="anim_line"></span>
-                <span><img src="images/anim_line.png" alt="anim_line"></span>
-                <span><img src="images/anim_line.png" alt="anim_line"></span>
-              </div>
-              	<!-- row start -->
-                <div class="row">
-                	<!-- content -->
-                    <div class="col-md-6">
-                        <div class="free_text">
-                            <div class="section_title">
-                                <h2>Download for Free on Apple & Play Store</h2>
-                                <p>Get instant access to Orems on the App Store and Google Play. Download now and enjoy secure and seamless transactions anytime, anywhere! </p>
-                            </div>
-                            <ul class="app_btn">
-                              <li>
-                                <a href="#">
-                                  <img src="images/appstore_blue.png" alt="image" >
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#">
-                                  <img src="images/googleplay_blue.png" alt="image" >
-                                </a>
-                              </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- images -->
-                    <div class="col-md-6">
-                        <div class="free_img">
-                            <!-- <img src="images/samsung-galaxy-still__1_-removebg-preview.png" alt="image" > -->
-                            <img class="mobile_mockup" src="images/iphone-15-.png" alt="image" >
-                        </div>
-                    </div>
-                </div>
-                <!-- row end -->
-            </div>
-        </div>
-        <!-- container end -->
-    </section>
-    <!-- Download-Free-App-section-end  -->
-
-    <!-- Footer-Section start -->
-    <footer>
-        <div class="top_footer" id="contact">
-          <!-- animation line -->
+      <!-- Footer-Section -->
+      <footer>
+        <div class="top_footer">
           <div class="anim_line dark_bg">
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
-            <span><img src="images/anim_line.png" alt="anim_line"></span>
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
+            <span><img src="images/anim_line.png" alt="anim_line" /></span>
           </div>
-          	<!-- container start -->
-            <div class="container">
-              <!-- row start -->
-              <div class="row">
-              	  <!-- footer link 1 -->
-                  <div class="col-lg-4 col-md-6 col-12">
-                      <div class="abt_side">
-                        <div class="logo"> <img src="images/orems_new.png" alt="image" ></div>
-                        <ul>
-                          <li><a href="#">support@example.com</a></li>
-                          <li><a href="#">+1-900-123 4567</a></li>
-                        </ul>
-                        <ul class="social_media">
-                            <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                            <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                            <li><a href="#"><i class="icofont-instagram"></i></a></li>
-                            <li><a href="#"><i class="icofont-pinterest"></i></a></li>
-                        </ul>
-                      </div>
-                  </div>
 
-                  <!-- footer link 2 -->
-                  <div class="col-lg-3 col-md-6 col-12">
-                      <div class="links">
-                        <h3>Useful Links</h3>
-                          <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Contact us</a></li>
-                            <li><a href="#">How it works</a></li>
-                          </ul>
-                      </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="abt_side">
+                  <div class="logo">
+                    <img src="images/orems_new.png" alt="Orems Logo" />
                   </div>
-
-                  <!-- footer link 3 -->
-                  <div class="col-lg-3 col-md-6 col-12">
-                    <div class="links">
-                      <h3>Help & Suport</h3>
-                        <ul>
-                          <li><a href="#">FAQs</a></li>
-                          <li><a href="#">Support</a></li>
-                          <li><a href="#">Terms & conditions</a></li>
-                          <li><a href="#">Privacy policy</a></li>
-                        </ul>
-                    </div>
-                  </div>
-
-                  <!-- footer link 4 -->
-                  <div class="col-lg-2 col-md-6 col-12">
-                    <div class="try_out">
-                        <h3>Let’s Try Out</h3>
-                        <ul class="app_btn">
-                          <li>
-                            <a href="#">
-                              <img src="images/appstore_blue.png" alt="image" >
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <img src="images/googleplay_blue.png" alt="image" >
-                            </a>
-                          </li>
-                        </ul>
-                    </div>
-                  </div>
+                  <ul>
+                    <li>
+                      <a href="mailto:support@orems.com">support@orems.com</a>
+                    </li>
+                    <li><a href="tel:+1-888-553-4611">+1-888-553-4611</a></li>
+                  </ul>
+                  <ul class="social_media">
+                    <li>
+                      <a href="#" onclick="return false;"
+                        ><i class="icofont-facebook"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="return false;"
+                        ><i class="icofont-twitter"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="return false;"
+                        ><i class="icofont-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="return false;"
+                        ><i class="icofont-pinterest"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <!-- row end -->
+
+              <div class="col-lg-3 col-md-6 col-12">
+                <div class="links">
+                  <h3>Useful Links</h3>
+                  <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#contact_us">Contact us</a></li>
+                    <li><a href="#how_it_work">How it works</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-12">
+                <div class="links">
+                  <h3>Help & Support</h3>
+                  <ul>
+                    <li><a href="#faq">FAQs</a></li>
+                    <li><a href="#contact_us">Support</a></li>
+                    <li>
+                      <a href="t&c.html">Terms & conditions</a>
+                    </li>
+                    <li><a href="privacy_policy.html">Privacy policy</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-6 col-12">
+                <div class="try_out">
+                  <h3>Let's Try Out</h3>
+                  <ul class="app_btn">
+                    <li>
+                      <a href="#download">
+                        <img src="images/appstore_blue.png" alt="App Store" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#download">
+                        <img
+                          src="images/googleplay_blue.png"
+                          alt="Google Play"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- container end -->
         </div>
 
-        <!-- last footer -->
         <div class="bottom_footer">
-        	<!-- container start -->
-            <div class="container">
-              <!-- row start -->
-              <div class="row">
-                <div class="col-md-6">
-                    <p>© Copyrights 2022. All rights reserved.</p>
-                </div>
-                <div class="col-md-6">
-                    <p class="developer_text">Design & developed by <a href="#" target="blank">Orems</a></p>
-                </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <p>© Copyrights 2025. All rights reserved.</p>
+              </div>
+              <div class="col-md-6">
+                <p class="developer_text">
+                  Design & developed by
+                  <a href="#" onclick="return false;">Orems</a>
+                </p>
+              </div>
             </div>
-            <!-- row end -->
-            </div>
-            <!-- container end -->
+          </div>
         </div>
 
-        <!-- go top button -->
         <div class="go_top">
-            <span><img src="images/go_top.png" alt="image" ></span>
+          <span><img src="images/go_top.png" alt="go to top" /></span>
         </div>
-    </footer>
-    <!-- Footer-Section end -->
-
-  <!-- VIDEO MODAL -->
-  <div class="modal fade youtube-video" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <button id="close-video" type="button" class="button btn btn-default text-right" data-dismiss="modal" title="Close Video">
-            <i class="icofont-close-line-circled"></i>
-          </button>
-            <div class="modal-body">
-                <div id="video-container" class="video-container">
-                    <iframe id="youtubevideo" src="#" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-                </div>        
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div> 
+      </footer>
     </div>
-  </div>
 
-  <div class="purple_backdrop"></div>
-
-  </div>
-  <!-- Page-wrapper-End -->
-
-  <!-- Jquery-js-Link -->
-  <script src="js/jquery.js"></script>
-  <!-- owl-js-Link -->
-  <script src="js/owl.carousel.min.js"></script>
-  <!-- bootstrap-js-Link -->
-  <script src="js/bootstrap.min.js"></script>
-  <!-- aos-js-Link -->
-  <script src="js/aos.js"></script>
-  <!-- main-js-Link -->
-  <script src="js/main.js"></script>
-
-</body>
-
-
-<!-- Mirrored from kalanidhithemes.com/live-preview/landing-page/apper/all-demo/01-app-landing-page-defoult/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Mar 2025 10:00:02 GMT -->
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
