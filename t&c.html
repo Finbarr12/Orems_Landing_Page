@@ -26,6 +26,44 @@
     />
 
     <style>
+      /* Color Override - Change all purple to #0A54ED */
+      :root {
+        --light-purple: #e8f2ff !important;
+        --purple: #0a54ed !important;
+        --bg-purple: #0a54ed !important;
+        --dark-purple: #083bb8 !important;
+        --body-text-purple: #3e3f66 !important;
+        --text-white: #ffffff !important;
+        --bg-white: #ffffff !important;
+        --slider-dots-color: #d4d2dd !important;
+        --light-bg: #e8f2ff !important;
+      }
+
+      /* Override purple colors with #0A54ED */
+      .btn.puprple_btn,
+      .btn.purple_btn,
+      .dark_btn {
+        background: #0a54ed !important;
+        border-color: #0a54ed !important;
+      }
+
+      .btn.puprple_btn:hover,
+      .btn.purple_btn:hover,
+      .dark_btn:hover {
+        background: #083bb8 !important;
+        border-color: #083bb8 !important;
+      }
+
+      /* Footer logo - make it white */
+      .top_footer .logo img {
+        filter: brightness(0) invert(1) !important;
+      }
+
+      /* Footer background */
+      .top_footer {
+        background: linear-gradient(135deg, #083bb8, #0a54ed) !important;
+      }
+
       .terms-content {
         padding: 60px 0;
         background: #fff;
@@ -40,11 +78,11 @@
       }
 
       .terms-section h3 {
-        color: #6c5ce7;
+        color: #0a54ed;
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 20px;
-        border-bottom: 2px solid #6c5ce7;
+        border-bottom: 2px solid #0a54ed;
         padding-bottom: 10px;
       }
 
@@ -66,7 +104,7 @@
       }
 
       .intro-text {
-        background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+        background: linear-gradient(135deg, #0a54ed 0%, #4a7cff 100%);
         color: white;
         padding: 40px;
         border-radius: 15px;
@@ -538,11 +576,11 @@
               If you have any questions or concerns about these Terms and
               Conditions, please don't hesitate to contact us:
             </p>
-            <p><strong>Email:</strong> support@orems.com</p>
-            <p><strong>Phone:</strong> +1 (888) 553-46-11</p>
+            <p><strong>Email:</strong> contactservice@orems.com.ng</p>
+            <p><strong>Phone:</strong> 08033991264</p>
             <p>
-              <strong>Address:</strong> 5687, Business Avenue, New York, USA
-              5687
+              <strong>Address:</strong> No 4 Umudieke Street, Central Area,
+              Asaba, Nigeria
             </p>
           </div>
 
@@ -559,7 +597,7 @@
               class="btn"
               style="
                 background: white;
-                color: #6c5ce7;
+                color: #0a54ed;
                 padding: 12px 30px;
                 border-radius: 25px;
                 text-decoration: none;
@@ -600,8 +638,12 @@
                     <img src="images/orems_new.png" alt="image" />
                   </div>
                   <ul>
-                    <li><a href="#">support@example.com</a></li>
-                    <li><a href="#">+1-900-123 4567</a></li>
+                    <li>
+                      <a href="mailto:contactservice@orems.com.ng"
+                        >contactservice@orems.com.ng</a
+                      >
+                    </li>
+                    <li><a href="tel:08033991264">08033991264</a></li>
                   </ul>
                   <ul class="social_media">
                     <li>
@@ -641,7 +683,7 @@
                     <li><a href="#">FAQs</a></li>
                     <li><a href="#">Support</a></li>
                     <li><a href="#" class="active">Terms & conditions</a></li>
-                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="./privacy_policy.html">Privacy policy</a></li>
                   </ul>
                 </div>
               </div>
@@ -677,7 +719,7 @@
             <!-- row start -->
             <div class="row">
               <div class="col-md-6">
-                <p>© Copyrights 2022. All rights reserved.</p>
+                <p>© Copyrights 2025. All rights reserved.</p>
               </div>
               <div class="col-md-6">
                 <p class="developer_text">
