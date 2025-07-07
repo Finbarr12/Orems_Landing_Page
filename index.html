@@ -136,21 +136,56 @@
         filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
       }
 
+      /* ORIGINAL: Features section phone image - Back to original positioning */
       .feature_img img {
-        max-width: 100%;
-        height: auto;
-        filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
+        max-width: 320px !important;
+        max-height: 500px !important;
+        width: auto !important;
+        height: auto !important;
+        filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.25)) !important;
+        border-radius: 25px !important;
+        object-fit: contain !important;
       }
 
+      /* KEEP LARGE: About section phone image (Withdrawal) - Keep the larger size */
       .about_img {
-        position: relative;
-        text-align: center;
+        position: relative !important;
+        text-align: center !important;
+        padding: 50px 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-height: 600px !important;
+      }
+
+      .about_img img {
+        max-width: 450px !important;
+        max-height: 700px !important;
+        width: auto !important;
+        height: auto !important;
+        filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.35)) !important;
+        border-radius: 30px !important;
+        display: block !important;
+        margin: 0 auto !important;
+        object-fit: contain !important;
+        position: relative !important;
+        z-index: 2 !important;
       }
 
       .free_img img {
         max-width: 100%;
         height: auto;
         filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+      }
+
+      /* Better spacing for about app section */
+      .about_app_section {
+        padding: 100px 0 !important;
+      }
+
+      .about_app_section .row {
+        align-items: center !important;
+        min-height: 650px !important;
       }
 
       /* Contact section improvements */
@@ -217,6 +252,55 @@
       .map_inner iframe {
         border-radius: 15px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .feature_img img {
+          max-width: 280px !important;
+          max-height: 450px !important;
+        }
+
+        .about_img img {
+          max-width: 380px !important;
+          max-height: 580px !important;
+        }
+
+        .about_img {
+          min-height: 550px !important;
+        }
+
+        .about_app_section {
+          padding: 80px 0 !important;
+        }
+
+        .about_app_section .row {
+          min-height: 600px !important;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .feature_img img {
+          max-width: 240px !important;
+          max-height: 400px !important;
+        }
+
+        .about_img img {
+          max-width: 320px !important;
+          max-height: 500px !important;
+        }
+
+        .about_img {
+          min-height: 480px !important;
+        }
+
+        .about_app_section {
+          padding: 60px 0 !important;
+        }
+
+        .about_app_section .row {
+          min-height: 520px !important;
+        }
       }
     </style>
   </head>
@@ -801,7 +885,10 @@
               data-aos-duration="1500"
               data-aos-delay="100"
             >
-              <img src="images/samsungGalaxy.png" alt="Samsung Galaxy" />
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/group_orems-1liuy79glfpdoSAFfWx0ZYkZTFWroD.png"
+                alt="Orems Group Chat Feature - Secure transaction coordination with group supervision and real-time communication"
+              />
             </div>
           </div>
         </div>
@@ -817,20 +904,10 @@
                 data-aos="fade-in"
                 data-aos-duration="1500"
               >
-                <div class="frame_img">
-                  <img
-                    class="moving_position_animatin"
-                    src="images/about-frame.png"
-                    alt="phone frame"
-                  />
-                </div>
-                <div class="screen_img">
-                  <img
-                    class="moving_animation"
-                    src="images/about-screen.png"
-                    alt="phone screen"
-                  />
-                </div>
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/withdraw_orems-fVC6y8MpxXTPY1MfKlgOczbo37sBiK.png"
+                  alt="Orems Withdrawal Feature - Secure fund withdrawal with 2 million Naira balance display and payment profile selection"
+                />
               </div>
             </div>
             <div class="col-lg-6">
@@ -1537,9 +1614,9 @@
                     <li><a href="#faq">FAQs</a></li>
                     <li><a href="#contact_us">Support</a></li>
                     <li>
-                      <a href="t&c.html">Terms & conditions</a>
+                      <a href="terms-and-conditions.html">Terms & conditions</a>
                     </li>
-                    <li><a href="privacy_policy.html">Privacy policy</a></li>
+                    <li><a href="privacy-policy.html">Privacy policy</a></li>
                   </ul>
                 </div>
               </div>
